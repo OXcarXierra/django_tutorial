@@ -1,0 +1,21 @@
+.header_container{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 1rem;
+}
+.header_logo{
+    font-family: 'Cinzel', serif;
+}
+
+.footer_container{
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+.footer_menu{
+    font-size: 0.6rem
+}
+.footer_logo{
+     font-family: 'Cinzel', serif;
+     margin-top: 1rem;
+}
