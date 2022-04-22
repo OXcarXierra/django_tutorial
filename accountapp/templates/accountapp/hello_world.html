@@ -4,8 +4,26 @@
     <style>
     </style>
 
-    <div style="height: 20rem; background-color: #C0FFEE; border-radius:1rem; margin: 2rem;">
-        <h1>Testing</h1>
+    <div style="margin: 2rem; text-align: center">
+        <h3>Hello World LIST!</h3>
+
+        <form action="/account/hello_world/" method="post">
+            {% csrf_token %}
+            <div>
+                <input type="submit" class="btn btn-primary" value="POST">
+            </div>
+            <div>
+                <input type="text" name="hello_world_input">
+            </div>
+
+        </form>
+        {% if hello_world_list %}
+            {% for hello_world in hello_world_list %}
+            <h4>
+                {{hello_world.text}}
+            </h4>
+        {% endfor %}
+        {% endif %}
     </div>
 
 {% endblock %}
