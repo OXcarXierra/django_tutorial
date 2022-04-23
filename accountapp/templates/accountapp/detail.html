@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<div style="max-width: 500px; text-align: center; margin: 4rem auto;">
+  <div>
+    <p>
+      {{ target_user.date_joined }}
+    </p>
+    <h2>
+      {{ target_user.username }}
+    </h2>
+  </div>
+</div>
+
+{% endblock %}

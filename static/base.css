@@ -3,6 +3,7 @@
     text-align: center;
     margin: 1rem 1rem;
 }
+
 .header_logo{
     font-family: 'Cinzel', serif;
 }
@@ -12,9 +13,11 @@
     text-align: center;
     margin-top: 1rem;
 }
+
 .footer_menu{
-    font-size: 0.6rem
+    font-size: 0.9rem
 }
+
 .footer_logo{
      font-family: 'Cinzel', serif;
      margin-top: 1rem;
