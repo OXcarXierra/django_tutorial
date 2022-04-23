@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os, environ
+
+from django.urls import reverse_lazy
+
 env = environ.Env(
     DEBUG=(bool, False)
 )
@@ -132,3 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+
+LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
+LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
