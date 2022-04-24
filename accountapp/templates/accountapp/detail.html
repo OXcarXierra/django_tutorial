@@ -5,25 +5,26 @@
 
 <div style="max-width: 500px; text-align: center; margin: 4rem auto;">
   <div>
-    <p>
-      {{ target_user.date_joined }}
-    </p>
-
-    <img src="{{ target_user.profile.image.url }}" alt="" style="height: 10rem; width: 10rem; border-radius: 10rem; margin-bottom: 2rem">
-
     {% if target_user.profile %}
+    <img src="{{ target_user.profile.image.url }}" alt="" style="height: 10rem; width: 10rem; border-radius: 10rem; margin-bottom: 2rem">
     <h2 style="font-family: NotoSansR">
       {{ target_user.profile.nickname }}
+      {% if target_user == user %}
       <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
         edit
       </a>
+      {% endif %}
     </h2>
     {% else %}
-    <a href="{% url 'profileapp:create' %}">
-      <h2 style="font-family: NotoSansR">
-        Create Profile
-      </h2>
-    </a>
+      {% if target_user == user %}
+      <a href="{% url 'profileapp:create' %}">
+        <h2 style="font-family: NotoSansR">
+          Create Profile
+        </h2>
+      </a>
+      {% else %}
+       프로필 미생성 유저입니다.
+      {% endif %}
     {% endif %}
 
     <h4 style="margin-bottom: 2rem">
