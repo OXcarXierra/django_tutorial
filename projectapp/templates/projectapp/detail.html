@@ -13,7 +13,10 @@
     <h4 style="margin-bottom: 2rem">
       {{  target_project.description }}
     </h4>
-
+  </div>
+  <div style="width: 100%;">
+        {% include 'snippets/list_fragment.html' with article_list=object_list %}
+  </div>
 </div>
 
 {% endblock %}
