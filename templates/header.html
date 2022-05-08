@@ -23,6 +23,9 @@
         <a href="{% url 'accountapp:detail' pk=user.pk %}" class="header_nav">
             <span>My Page</span>
         </a>
+        <a href="{% url 'subscribeapp:list' %}" class="header_nav">
+            <span>Subscription</span>
+        </a>
         {% endif %}
 
     </div>
